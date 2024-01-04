@@ -7,7 +7,6 @@ package client
 import (
 	"fmt"
 
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/metrics"
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/openstack"
 	"github.com/gophercloud/gophercloud/openstack/networking/v2/extensions/attributestags"
@@ -17,6 +16,7 @@ import (
 	utilNetworks "github.com/gophercloud/utils/openstack/networking/v2/networks"
 	utilPorts "github.com/gophercloud/utils/openstack/networking/v2/ports"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/metrics"
 )
 
 var _ Network = &neutronV2{}

@@ -34,8 +34,8 @@ package controller_test
 
 import (
 	"github.com/gardener/machine-controller-manager-provider-openstack/test/integration/provider"
-	"github.com/gardener/machine-controller-manager/pkg/test/integration/common"
 	. "github.com/onsi/ginkgo"
+	"github.com/xuanson2406/machine-controller-manager/pkg/test/integration/common"
 )
 
 var commons = common.NewIntegrationTestFramework(&provider.ResourcesTrackerImpl{}, 400)

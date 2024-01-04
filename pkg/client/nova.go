@@ -7,7 +7,6 @@ package client
 import (
 	"fmt"
 
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/metrics"
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/openstack"
 	"github.com/gophercloud/gophercloud/openstack/compute/v2/extensions/bootfromvolume"
@@ -15,6 +14,7 @@ import (
 	"github.com/gophercloud/utils/openstack/compute/v2/flavors"
 	"github.com/gophercloud/utils/openstack/imageservice/v2/images"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/metrics"
 )
 
 const (

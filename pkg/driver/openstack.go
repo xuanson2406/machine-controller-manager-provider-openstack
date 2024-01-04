@@ -6,7 +6,7 @@
 package driver
 
 import (
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/driver"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/driver"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

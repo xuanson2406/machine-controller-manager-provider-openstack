@@ -9,10 +9,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gardener/machine-controller-manager/pkg/apis/machine/v1alpha1"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/driver"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/machinecodes/codes"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/machinecodes/status"
+	"github.com/xuanson2406/machine-controller-manager/pkg/apis/machine/v1alpha1"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/driver"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/machinecodes/codes"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/machinecodes/status"
 	"k8s.io/klog/v2"
 
 	"github.com/gardener/machine-controller-manager-provider-openstack/pkg/apis/cloudprovider"
@@ -33,7 +33,7 @@ const (
 // Leaving the other methods to NOT_IMPLEMENTED error status.
 // Once this works you can implement the rest of the methods.
 //
-// Also make sure each method return appropriate errors mentioned in `https://github.com/gardener/machine-controller-manager/blob/master/docs/development/machine_error_codes.md`
+// Also make sure each method return appropriate errors mentioned in `https://github.com/xuanson2406/machine-controller-manager/blob/master/docs/development/machine_error_codes.md`
 
 // CreateMachine handles a machine creation request
 //

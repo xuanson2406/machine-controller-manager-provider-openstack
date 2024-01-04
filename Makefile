@@ -5,8 +5,8 @@
 BINARY_PATH         := bin/
 REPO_ROOT           := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 COVERPROFILE        := test/output/coverprofile.out
-REGISTRY            := eu.gcr.io/gardener-project/gardener
-IMAGE_PREFIX        := $(REGISTRY)/extensions
+REGISTRY           	:= registry.fke.fptcloud.com
+IMAGE_PREFIX        := $(REGISTRY)/xplat-fke
 NAME                := machine-controller-manager-provider-openstack
 IMAGE_NAME          := $(IMAGE_PREFIX)/$(NAME)
 VERSION             := $(shell cat VERSION)

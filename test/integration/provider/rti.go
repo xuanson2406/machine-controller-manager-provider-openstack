@@ -7,7 +7,7 @@ package provider
 import (
 	"fmt"
 
-	"github.com/gardener/machine-controller-manager/pkg/apis/machine/v1alpha1"
+	"github.com/xuanson2406/machine-controller-manager/pkg/apis/machine/v1alpha1"
 
 	"github.com/gardener/machine-controller-manager-provider-openstack/pkg/client"
 )

@@ -9,12 +9,12 @@
 package main
 
 import (
-	_ "github.com/gardener/machine-controller-manager/pkg/util/client/metrics/prometheus" // for client metric registration
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/app"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/app/options"
-	_ "github.com/gardener/machine-controller-manager/pkg/util/reflector/prometheus" // for reflector metric registration
-	_ "github.com/gardener/machine-controller-manager/pkg/util/workqueue/prometheus" // for workqueue metric registration
 	"github.com/spf13/pflag"
+	_ "github.com/xuanson2406/machine-controller-manager/pkg/util/client/metrics/prometheus" // for client metric registration
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/app"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/app/options"
+	_ "github.com/xuanson2406/machine-controller-manager/pkg/util/reflector/prometheus" // for reflector metric registration
+	_ "github.com/xuanson2406/machine-controller-manager/pkg/util/workqueue/prometheus" // for workqueue metric registration
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/component-base/cli/flag"
