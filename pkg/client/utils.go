@@ -5,8 +5,8 @@
 package client
 
 import (
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/metrics"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/metrics"
 )
 
 // onCall records a request to the specified service.

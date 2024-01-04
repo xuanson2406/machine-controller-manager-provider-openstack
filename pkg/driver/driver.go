@@ -9,9 +9,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/driver"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/machinecodes/codes"
-	"github.com/gardener/machine-controller-manager/pkg/util/provider/machinecodes/status"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/driver"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/machinecodes/codes"
+	"github.com/xuanson2406/machine-controller-manager/pkg/util/provider/machinecodes/status"
 	"k8s.io/klog/v2"
 
 	"github.com/gardener/machine-controller-manager-provider-openstack/pkg/apis/cloudprovider"
@@ -31,7 +31,7 @@ const (
 // Leaving the other methods to NOT_IMPLEMENTED error status.
 // Once this works you can implement the rest of the methods.
 //
-// Also make sure each method return appropriate errors mentioned in `https://github.com/gardener/machine-controller-manager/blob/master/docs/development/machine_error_codes.md`
+// Also make sure each method return appropriate errors mentioned in `https://github.com/xuanson2406/machine-controller-manager/blob/master/docs/development/machine_error_codes.md`
 
 // CreateMachine handles a machine creation request
 //
@@ -200,4 +200,23 @@ func (p *OpenstackDriver) GetVolumeIDs(_ context.Context, req *driver.GetVolumeI
 		}
 	}
 	return &driver.GetVolumeIDsResponse{VolumeIDs: names}, nil
+}
+
+// GenerateMachineClassForMigration helps in migration of one kind of machineClass CR to another kind.
+// For instance an machineClass custom resource of `AWSMachineClass` to `MachineClass`.
+// Implement this functionality only if something like this is desired in your setup.
+// If you don't require this functionality leave is as is. (return Unimplemented)
+//
+// The following are the tasks typically expected out of this method
+// 1. Validate if the incoming classSpec is valid one for migration (e.g. has the right kind).
+// 2. Migrate/Copy over all the fields/spec from req.ProviderSpecificMachineClass to req.MachineClass
+// For an example refer
+//
+//	https://github.com/prashanth26/machine-controller-manager-provider-gcp/blob/migration/pkg/gcp/machine_controller.go#L222-L233
+func (p *OpenstackDriver) GenerateMachineClassForMigration(_ context.Context, req *driver.GenerateMachineClassForMigrationRequest) (*driver.GenerateMachineClassForMigrationResponse, error) {
+	// Log messages to track start and end of request
+	klog.V(2).Infof("MigrateMachineClass request has been recieved for %q", req.ClassSpec)
+	defer klog.V(2).Infof("MigrateMachineClass request has been processed successfully for %q", req.ClassSpec)
+
+	return &driver.GenerateMachineClassForMigrationResponse{}, status.Error(codes.Unimplemented, "")
 }

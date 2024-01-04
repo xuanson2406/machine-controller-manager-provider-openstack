@@ -33,13 +33,13 @@
 package controller_test
 
 import (
-	"github.com/gardener/machine-controller-manager/pkg/test/integration/common"
 	. "github.com/onsi/ginkgo"
+	"github.com/xuanson2406/machine-controller-manager/pkg/test/integration/common"
 
 	"github.com/gardener/machine-controller-manager-provider-openstack/test/integration/provider"
 )
 
-// the timeout is changed to accommodate for time taken by node-critical components to get ready. PR - https://github.com/gardener/machine-controller-manager/pull/778
+// the timeout is changed to accommodate for time taken by node-critical components to get ready. PR - https://github.com/xuanson2406/machine-controller-manager/pull/778
 var commons = common.NewIntegrationTestFramework(&provider.ResourcesTrackerImpl{}, 600)
 
 var _ = BeforeSuite(commons.SetupBeforeSuite)
